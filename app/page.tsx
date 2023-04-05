@@ -1,7 +1,8 @@
 "use client";
 import Search from "./components/Search";
+import Footer from "./components/Footer";
 
-export default function Home() {
+const Home = () => {
   return (
     <section className="bg-white">
       <div className="py-8 px-4 mx-auto max-w-screen-xl h-screen text-center lg:py-16 z-10 relative flex justify-center items-center flex-col">
@@ -12,8 +13,11 @@ export default function Home() {
           Search for all things Formula 1
         </p>
         <Search />
+        <Footer />
       </div>
       <div className="bg-gradient-to-r from-slate-800 to-slate-900 w-full h-full absolute top-0 left-0 z-0"></div>
     </section>
   );
-}
+};
+
+export default Home;
