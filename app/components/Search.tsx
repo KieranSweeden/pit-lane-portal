@@ -1,23 +1,7 @@
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ChangeEventHandler, FC, useEffect, useState } from "react";
-
-type FormulaOneDriver = {
-  driverId: string;
-  givenName: string;
-  familyName: string;
-  dateOfBirth: string;
-  nationality: string;
-  url: string;
-};
-
-type FormulaOneApiResponse = {
-  MRData: {
-    DriverTable: {
-      Drivers: FormulaOneDriver[];
-    };
-  };
-};
+import { FormulaOneApiResponse, FormulaOneDriver } from "../types";
 
 async function fetchDrivers() {
   console.log("Fetching drivers from db");
