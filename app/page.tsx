@@ -15,7 +15,7 @@ const Home = () => {
         <Search />
         <Footer />
       </div>
-      <div className="bg-gradient-to-r from-slate-800 to-slate-900 w-full h-full absolute top-0 left-0 z-0"></div>
+      <div className="bg-gradient-to-r from-slate-800 to-slate-950 w-full h-full absolute top-0 left-0 z-0"></div>
     </section>
   );
 };
