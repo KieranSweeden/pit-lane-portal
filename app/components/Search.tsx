@@ -37,15 +37,15 @@ function getStoredDrivers() {
   return storedDrivers;
 }
 
-interface SearchResultsProps {
-  drivers: FormulaOneDriver[];
-}
+const SearchResult: FC<{ driver: FormulaOneDriver }> = ({ driver }) => {
+  return <li key={driver.driverId}>{driver.familyName}</li>;
+};
 
-const SearchResults: FC<SearchResultsProps> = ({ drivers }) => {
+const SearchResults: FC<{ drivers: FormulaOneDriver[] }> = ({ drivers }) => {
   return (
     <ul>
       {drivers.map((driver: FormulaOneDriver) => (
-        <li key={driver.driverId}>{driver.familyName}</li>
+        <SearchResult key={driver.driverId} driver={driver} />
       ))}
     </ul>
   );
