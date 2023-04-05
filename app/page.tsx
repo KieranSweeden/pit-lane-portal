@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 const Home = () => {
   return (
     <section className="bg-white">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl h-screen text-center lg:py-16 z-10 relative flex justify-center items-center flex-col">
+      <div className="py-8 px-4 mx-auto max-w-screen-xl h-screen lg:py-16 z-10 relative flex justify-start items-center flex-col">
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
           Pit Lane Portal
         </h1>

@@ -58,7 +58,7 @@ export default function Search() {
 
   const handleInputChange: ChangeEventHandler = (event) => {
     const searchInput = event.target as HTMLInputElement;
-    const searchValue = searchInput.value.trim();
+    const searchValue = searchInput.value.toLowerCase().trim();
 
     if (searchValue) {
       const matchingDrivers = drivers.filter(({ givenName, familyName }) => {
@@ -78,7 +78,7 @@ export default function Search() {
   };
 
   return (
-    <section>
+    <section className="w-4/12">
       <form className="w-full max-w-md mx-auto">
         <div className="relative">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -87,7 +87,7 @@ export default function Search() {
           <input
             type="search"
             id="driver-search"
-            className="block w-full p-4 pl-10 text-sm text-slate-900 border border-slate-300 rounded-lg bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="block w-full p-4 pl-10 text-sm text-slate-900 border border-slate-300 rounded-full bg-white focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Search drivers"
             onChange={handleInputChange}
           />
